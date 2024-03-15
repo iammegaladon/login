@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .loader-container {
+            width: 100%;
+            height: 4px;
+            position: relative;
+            overflow: hidden;
+            background-color: #f3f3f3;
+            margin-top: 20px;
+        }
+
+        .loader-bar {
+            width: 0;
+            height: 100%;
+            background-color: #3498db;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: progress 3s linear forwards;
+        }
+
+        @keyframes progress {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Team Meg Corporation Client Portal</header>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input id="email" type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input id="password" type="password" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                </div>
+                <button class="submitBtn" type="button" onclick="submitForm()">Login</button>
+                <div class="loader-container" id="loader" style="display:none;">
+                    <div class="loader-bar"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var loaderContainer = document.getElementById("loader");
+
+            if (email === "tmc@client321" && password === "h8xi7") {
+                loaderContainer.style.display = "block";
+                setTimeout(function() {
+                    document.getElementById("loginForm").action = "dashboard.html";
+                    document.getElementById("loginForm").submit();
+                }, 3000); // 3 seconds delay
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        }
+    </script>
+<script>
+        window.history.pushState({}, '', '/login');
+</script>
+    
+</body>
+</html>
