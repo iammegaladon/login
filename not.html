@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Meg Corporation Client Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- DaisyUI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.9.3/dist/full.css" rel="stylesheet">
+    <style>
+        /* Hide the menu initially on mobile */
+        .hidden-mobile {
+            display: none;
+        }
+
+        /* Show the menu on desktop */
+        @media (min-width: 768px) {
+            .hidden-desktop {
+                display: none;
+            }
+
+            .show-desktop {
+                display: block;
+            }
+        }
+
+        /* Show the menu on mobile when active */
+        .show-mobile {
+            display: block;
+        }
+
+        .hide-mobile {
+            display: none;
+        }
+
+        /* Smooth animation for mobile menu */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body class="font-sans" style="font-family: 'Poppins', sans-serif;">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 py-4 text-center">
+                <h1 class="text-2xl font-bold text-gray-800">Team Meg Corporation Client Portal</h1>
+            </div>
+            <!-- Toggle button for mobile -->
+            <div class="col-12 d-md-none">
+                <button id="toggleMenu" class="bg-gray-200 p-2 rounded">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+            <!-- Vertical Navmenu -->
+            <nav id="navMenu" class="col-md-3 bg-gray-200 py-4 hidden-mobile show-desktop">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">perm_identity</span> Profile
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">settings</span> Settings
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">exit_to_app</span> Log Out
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">notifications</span> Notifications
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">inbox</span> Messages
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">insert_chart_outlined</span> Analytics
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="dashboard.html" class="flex items-center">
+                            <span class="material-icons mr-2">dashboard</span> Dashboard
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">event</span> Events
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">people</span> Users
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">forum</span> Forums
+                        </a>
+                    </li>
+                    <!-- Additional icons -->
+                    <li class="list-group-item mt-auto">
+                        <a href="not.html" class="flex items-center">
+                            <span class="material-icons mr-2">contact_support</span> Contact Support
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Main Content -->
+            <main class="col-md-9 py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger" role="alert">
+                                <i class="material-icons mr-2">error</i>
+                                Acute Error: Project Dependencies Not Updated. Kindly Contact Support to Use this.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+                     
+
+    <!-- DaisyUI JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@2.9.3/dist/full.js"></script>
+    <script>
+        // Toggle the menu visibility on mobile
+        const toggleMenu = document.getElementById('toggleMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        toggleMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden-mobile');
+            navMenu.classList.toggle('show-mobile');
+            navMenu.classList.toggle('slide-in-right');
+        });
+    </script>
+
+<script>
+    window.history.pushState({}, '', '/client?321%db?status=true%func?=false');
+</script>
+</body>
+
+</html>
