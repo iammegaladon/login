@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .progress-container {
+            width: 50%;
+            height: 30px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 100%;
+            background-color: #3498db;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var progressBar = document.getElementById("progressBar");
+            var width = 0;
+            var interval = setInterval(function() {
+                width += 10; // Increase by 10% every second
+                progressBar.style.width = width + "%";
+                if (width >= 100) {
+                    clearInterval(interval);
+                    setTimeout(function() {
+                        window.location.href = "login.html";
+                    }, 1000); // Redirect after 1 second
+                }
+            }, 1000); // Update progress bar every second
+        };
+    </script>
+
+
+<script>
+    // Change the URL without reloading the page
+    window.history.pushState({}, '', '/not?valid=true');
+</script>
+
+</body>
+</html>
