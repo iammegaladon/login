@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <html data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- DaisyUI CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.9.3/dist/full.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+
     <style>
         /* Hide the menu initially on mobile */
         .hidden-mobile {
@@ -61,106 +64,138 @@
 </head>
 
 <body class="font-sans" style="font-family: 'Poppins', sans-serif;">
-    <!-- Start of LiveChat (www.livechat.com) code -->
-<script>
-    window.__lc = window.__lc || {};
-    window.__lc.license = 17408778;
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechat.com/chat-with/17408778/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-<!-- End of LiveChat code -->
-
     <div class="container-fluid">
         <div class="row">
+        
+
             <!-- Title -->
             <div class="col-12 py-4 text-center">
                 <h1 class="text-2xl font-bold text-gray-800">Team Meg Corporation Client Portal</h1>
             </div>
             <!-- Toggle button for mobile -->
-            <div class="col-12 d-md-none">
-                <button id="toggleMenu" class="bg-gray-200 p-2 rounded">
-                    <span class="material-icons">menu</span>
-                </button>
+            <div class="col-12 d-md-none relative">
+                <label class="btn btn-circle swap swap-rotate" for="toggleMenu">
+                    <!-- this hidden checkbox controls the state -->
+                    <input type="checkbox" id="toggleMenu" />
+                    <!-- hamburger icon -->
+                    <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+                    <!-- close icon -->
+                    <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                </label>
+                <!-- Indicator -->
+               
             </div>
+            
+            
+            
             <!-- Vertical Navmenu -->
-            <nav id="navMenu" class="col-md-3 bg-gray-200 py-4 hidden-mobile show-desktop">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">perm_identity</span> Profile
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">settings</span> Settings
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">exit_to_app</span> Log Out
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">notifications</span> Notifications
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">inbox</span> Messages
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">insert_chart_outlined</span> Analytics
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="dashboard.html" class="flex items-center">
-                            <span class="material-icons mr-2">dashboard</span> Dashboard
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">event</span> Events
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">people</span> Users
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="not.html" class="flex items-center">
-                            <span class="material-icons mr-2">forum</span> Forums
-                        </a>
-                    </li>
+           <!-- Vertical Navmenu -->
+<nav id="navMenu" class="col-md-3 bg-gray-200 py-4 hidden-mobile show-desktop">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">perm_identity</span> Profile
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="settings.html" class="flex items-center">
+                <span class="material-icons mr-2">settings</span> Settings
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="login.html" class="flex items-center">
+                <span class="material-icons mr-2">exit_to_app</span> Log Out
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">notifications</span> Notifications
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">inbox</span> Messages
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">insert_chart_outlined</span> Analytics
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="dashboard.html" class="flex items-center">
+                <span class="material-icons mr-2">dashboard</span> Dashboard
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">event</span> Events
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">people</span> Users
+            </a>
+        </li>
+        
+        <li class="list-group-item">
+            <a href="not.html" class="flex items-center">
+                <span class="material-icons mr-2">forum</span> Forums
+                
+            </a>
+        </li>
+        <!-- Replace the form with an icon for Payments -->
+        <style>
+            /* Blink animation for dot indicator */
+            @keyframes blink {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        
+            .blink-dot {
+                animation: blink 1s infinite;
+            }
+        </style>
+        
+        <!-- Updated menu item with blinking dot indicator -->
+        <li class="list-group-item mt-auto">
+            <a href="payment.html" class="flex items-center">
+                <span class="material-icons mr-2">payment</span> Payments
+                <span class="ml-auto text-red-500 blink-dot">&#9679;</span> <!-- Blinking dot indicator -->
+            </a>
+        </li>
+        
+   
                     <!-- Additional icons -->
                     <li class="list-group-item mt-auto">
-                        <a href="not.html" class="flex items-center">
+                        <a href="customer_support.html" class="flex items-center">
                             <span class="material-icons mr-2">contact_support</span> Contact Support
                         </a>
                     </li>
                 </ul>
             </nav>
             <!-- Main Content -->
-            <main class="col-md-9 py-4">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="alert alert-danger" role="alert">
-                                <i class="material-icons mr-2">error</i>
-                                Acute Error: Project Dependencies Not Updated. Kindly Contact Support to Use this.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+          <!-- Main Content -->
+         
+<main class="col-md-9 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div role="alert" class="alert alert-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>We are currently updating your dashboard. Please check back later for the latest updates. Thank you for your patience.</span>
+                  </div>
+            </div>
+        </div>
+    </div>
+</main>
             
-                     
 
     <!-- DaisyUI JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/daisyui@2.9.3/dist/full.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         // Toggle the menu visibility on mobile
         const toggleMenu = document.getElementById('toggleMenu');
@@ -172,10 +207,40 @@
             navMenu.classList.toggle('slide-in-right');
         });
     </script>
-
-<script>
-    window.history.pushState({}, '', '/client?321%db?status=true%func?=false');
-</script>
 </body>
+<script>
+    window.history.pushState({}, '', '/client?321%db?status=true');
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Create and append loading spinner to the middle of the page
+    const loadingSpinner = document.createElement('span');
+    loadingSpinner.className = 'loading loading-spinner loading-lg';
+    loadingSpinner.style.position = 'fixed';
+    loadingSpinner.style.top = '50%';
+    loadingSpinner.style.left = '50%';
+    loadingSpinner.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(loadingSpinner);
 
+    // Hide the main content initially
+    const mainContent = document.querySelector('main');
+    mainContent.style.display = 'none';
+
+    // Simulate delay for 3 seconds
+    setTimeout(function() {
+        // Hide loading spinner
+        loadingSpinner.style.display = 'none';
+
+        // Show main content
+        mainContent.style.display = 'block';
+    }, 3000);
+});
+
+
+</script>
 </html>
+
+
+
+
+

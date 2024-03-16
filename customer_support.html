@@ -66,6 +66,8 @@
 <body class="font-sans" style="font-family: 'Poppins', sans-serif;">
     <div class="container-fluid">
         <div class="row">
+        
+
             <!-- Title -->
             <div class="col-12 py-4 text-center">
                 <h1 class="text-2xl font-bold text-gray-800">Team Meg Corporation Client Portal</h1>
@@ -96,7 +98,7 @@
             </a>
         </li>
         <li class="list-group-item">
-            <a href="not.html" class="flex items-center">
+            <a href="settings.html" class="flex items-center">
                 <span class="material-icons mr-2">settings</span> Settings
             </a>
         </li>
@@ -158,7 +160,7 @@
         
         <!-- Updated menu item with blinking dot indicator -->
         <li class="list-group-item mt-auto">
-            <a href="payment.html" class="flex items-center">
+            <a href="not.html" class="flex items-center">
                 <span class="material-icons mr-2">payment</span> Payments
                 <span class="ml-auto text-red-500 blink-dot">&#9679;</span> <!-- Blinking dot indicator -->
             </a>
@@ -175,48 +177,17 @@
             </nav>
             <!-- Main Content -->
           <!-- Main Content -->
-         
-
-
-<main class="col-md-9 py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div role="alert" class="alert shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <div>
-                      <h3 class="font-bold">Update!</h3>
-                      <div class="text-xs">You have a Update Regarding Payments.</div>
-                    </div>
-                    <a href="payment.html">
-                    <button class="btn btn-sm">See</button>
-                    </a>
-                  </div>
+          <main class="col-md-9 py-4">
+            <div class="container">
+                <!-- LiveChat Widget Section -->
+                <div class="iframe-container">
+                    <iframe src="https://direct.lc.chat/17408778/" frameborder="0" style="border: none; width: 100%; height: 600px;"></iframe>
+                </div>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h3 class="text-lg font-semibold mb-3">Project Details</h3>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li class="mb-2"><strong class="text-sm">Project ID:</strong> H8xi7</li>
-                    <li class="mb-2"><strong class="text-sm">Referral:</strong> Fiverr</li>
-                    <li class="mb-2"><strong class="text-sm">Project Received By:</strong> Muhammad Hamza</li>
-                    <li class="mb-2"><strong class="text-sm">Project Type:</strong> Android/IOS Development</li>
-                    <li class="mb-2"><strong class="text-sm">Project Budget:</strong> $3500</li>
-                    <li class="mb-2"><strong class="text-sm">Buyer Name:</strong> Mr. Donald Martin</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h3 class="text-lg font-semibold mb-3">Project Status</h3>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li><strong>Project Status:</strong> <span class="text-red-500 font-bold">Not Started</span></li>
-                    <li><strong>Payment:</strong> <span class="text-yellow-500 font-bold">Un-Paid</span></li>
-                    <li><strong>Payment Method:</strong> <span class="text-yellow-500 font-bold">Other</span></li>
-                </ul>
-            </div>
-        </div>
+        </main>
     </div>
-</main>
+</div>
+        
             
 
     <!-- DaisyUI JavaScript -->
@@ -238,47 +209,36 @@
 <script>
     window.history.pushState({}, '', '/client?321%db?status=true');
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Create and append loading spinner to the middle of the page
+    const loadingSpinner = document.createElement('span');
+    loadingSpinner.className = 'loading loading-spinner loading-lg';
+    loadingSpinner.style.position = 'fixed';
+    loadingSpinner.style.top = '50%';
+    loadingSpinner.style.left = '50%';
+    loadingSpinner.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(loadingSpinner);
+
+    // Hide the main content initially
+    const mainContent = document.querySelector('main');
+    mainContent.style.display = 'none';
+
+    // Simulate delay for 3 seconds
+    setTimeout(function() {
+        // Hide loading spinner
+        loadingSpinner.style.display = 'none';
+
+        // Show main content
+        mainContent.style.display = 'block';
+    }, 3000);
+});
+
+
+</script>
+
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Create and append loading spinner to the middle of the page
-        const loadingSpinner = document.createElement('span');
-        loadingSpinner.className = 'loading loading-spinner loading-lg';
-        loadingSpinner.style.position = 'fixed';
-        loadingSpinner.style.top = '50%';
-        loadingSpinner.style.left = '50%';
-        loadingSpinner.style.transform = 'translate(-50%, -50%)';
-        document.body.appendChild(loadingSpinner);
-    
-        // Hide the main content initially
-        const mainContent = document.querySelector('main');
-        mainContent.style.display = 'none';
-    
-        // Simulate delay for 3 seconds
-        setTimeout(function() {
-            // Hide loading spinner
-            loadingSpinner.style.display = 'none';
-    
-            // Show main content
-            mainContent.style.display = 'block';
-        }, 3000);
-    });
-    
-    
-    </script>
+    window.history.pushState({}, '', '/chat?db=true');
+</script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

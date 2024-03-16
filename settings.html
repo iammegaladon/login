@@ -66,6 +66,8 @@
 <body class="font-sans" style="font-family: 'Poppins', sans-serif;">
     <div class="container-fluid">
         <div class="row">
+        
+
             <!-- Title -->
             <div class="col-12 py-4 text-center">
                 <h1 class="text-2xl font-bold text-gray-800">Team Meg Corporation Client Portal</h1>
@@ -121,7 +123,7 @@
             </a>
         </li>
         <li class="list-group-item">
-            <a href="not.html" class="flex items-center">
+            <a href="dashboard.html" class="flex items-center">
                 <span class="material-icons mr-2">dashboard</span> Dashboard
             </a>
         </li>
@@ -167,7 +169,7 @@
    
                     <!-- Additional icons -->
                     <li class="list-group-item mt-auto">
-                        <a href="not.html" class="flex items-center">
+                        <a href="customer_support.html" class="flex items-center">
                             <span class="material-icons mr-2">contact_support</span> Contact Support
                         </a>
                     </li>
@@ -175,48 +177,41 @@
             </nav>
             <!-- Main Content -->
           <!-- Main Content -->
-         
-
-
-<main class="col-md-9 py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div role="alert" class="alert shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <div>
-                      <h3 class="font-bold">Update!</h3>
-                      <div class="text-xs">You have a Update Regarding Payments.</div>
+          <main class="col-md-9 py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-4">System Configuration</h2>
+                            <!-- Database Location -->
+                            <div class="mb-4">
+                                <label class="block text-gray-600 mb-2">Database Location</label>
+                                <input type="text" class="form-input mt-1 block w-full" value="Asia-Pacific" disabled>
+                            </div>
+                            <!-- Database API -->
+                            <div class="mb-4">
+                                <label class="block text-gray-600 mb-2">Database API</label>
+                                <input type="text" class="form-input mt-1 block w-full" value="MG-001288X6C7A97NKL1234" disabled>
+                            </div>
+                            <!-- Additional Fields -->
+                            <div class="mb-4">
+                                <label class="block text-gray-600 mb-2">Server IP Address</label>
+                                <input type="text" class="form-input mt-1 block w-full" value="192.168.1.100" disabled>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-600 mb-2">Backup Server</label>
+                                <input type="text" class="form-input mt-1 block w-full" value="backup.tmc.db98812pk.com" disabled>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-600 mb-2">Firewall Status</label>
+                                <input type="text" class="form-input mt-1 block w-full" value="Enabled" disabled>
+                            </div>
+                        </div>
                     </div>
-                    <a href="payment.html">
-                    <button class="btn btn-sm">See</button>
-                    </a>
-                  </div>
+                </div>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h3 class="text-lg font-semibold mb-3">Project Details</h3>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li class="mb-2"><strong class="text-sm">Project ID:</strong> H8xi7</li>
-                    <li class="mb-2"><strong class="text-sm">Referral:</strong> Fiverr</li>
-                    <li class="mb-2"><strong class="text-sm">Project Received By:</strong> Muhammad Hamza</li>
-                    <li class="mb-2"><strong class="text-sm">Project Type:</strong> Android/IOS Development</li>
-                    <li class="mb-2"><strong class="text-sm">Project Budget:</strong> $3500</li>
-                    <li class="mb-2"><strong class="text-sm">Buyer Name:</strong> Mr. Donald Martin</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h3 class="text-lg font-semibold mb-3">Project Status</h3>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li><strong>Project Status:</strong> <span class="text-red-500 font-bold">Not Started</span></li>
-                    <li><strong>Payment:</strong> <span class="text-yellow-500 font-bold">Un-Paid</span></li>
-                    <li><strong>Payment Method:</strong> <span class="text-yellow-500 font-bold">Other</span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</main>
+        </main>
+        
             
 
     <!-- DaisyUI JavaScript -->
@@ -238,45 +233,38 @@
 <script>
     window.history.pushState({}, '', '/client?321%db?status=true');
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Create and append loading spinner to the middle of the page
+    const loadingSpinner = document.createElement('span');
+    loadingSpinner.className = 'loading loading-spinner loading-lg';
+    loadingSpinner.style.position = 'fixed';
+    loadingSpinner.style.top = '50%';
+    loadingSpinner.style.left = '50%';
+    loadingSpinner.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(loadingSpinner);
+
+    // Hide the main content initially
+    const mainContent = document.querySelector('main');
+    mainContent.style.display = 'none';
+
+    // Simulate delay for 3 seconds
+    setTimeout(function() {
+        // Hide loading spinner
+        loadingSpinner.style.display = 'none';
+
+        // Show main content
+        mainContent.style.display = 'block';
+    }, 3000);
+});
+
+
+</script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Create and append loading spinner to the middle of the page
-        const loadingSpinner = document.createElement('span');
-        loadingSpinner.className = 'loading loading-spinner loading-lg';
-        loadingSpinner.style.position = 'fixed';
-        loadingSpinner.style.top = '50%';
-        loadingSpinner.style.left = '50%';
-        loadingSpinner.style.transform = 'translate(-50%, -50%)';
-        document.body.appendChild(loadingSpinner);
-    
-        // Hide the main content initially
-        const mainContent = document.querySelector('main');
-        mainContent.style.display = 'none';
-    
-        // Simulate delay for 3 seconds
-        setTimeout(function() {
-            // Hide loading spinner
-            loadingSpinner.style.display = 'none';
-    
-            // Show main content
-            mainContent.style.display = 'block';
-        }, 3000);
-    });
-    
-    
-    </script>
+    window.history.pushState({}, '', '/setting?information=true');
+</script>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
